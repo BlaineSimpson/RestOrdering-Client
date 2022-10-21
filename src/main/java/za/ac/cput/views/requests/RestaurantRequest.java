@@ -29,7 +29,7 @@ public class RestaurantRequest {
     public static List<Object> getAll(){
         List<Object> restaurantList = new ArrayList<>();
         try{
-            final String URL = "http://localhost:8080/restaurant/all";
+            final String URL = "http://localhost:8080/restaurant/restaurant/all";
             String responseBody = getRequest(URL);
             JSONArray restaurant = new JSONArray(responseBody);
 
@@ -51,7 +51,7 @@ public class RestaurantRequest {
 
     public static void viewById(String restaurantId) {
         try {
-            final String URL = "http://localhost:8080/restaurant/find/" + restaurantId;
+            final String URL = "http://localhost:8080/restaurant/restaurant/find/" + restaurantId;
             String responseBody = getRequest(URL);
 
             System.out.println(responseBody);
@@ -75,7 +75,7 @@ public class RestaurantRequest {
 
     public static void save(String restaurantId, String restaurantName, String restaurantAddress, Boolean isOpen){
         try{
-            final String URL = "http://localhost:8080/restaurant/save";
+            final String URL = "http://localhost:8080/restaurant/restaurant/save";
             Restaurant restaurant = RestaurantFactory.createRestaurant(restaurantId, restaurantName,restaurantAddress,isOpen );
             Gson g = new Gson();
             String jsonString = g.toJson(restaurant);
@@ -107,7 +107,7 @@ public class RestaurantRequest {
 
     public static void deleteAdmin(String restaurantId) {
         try {
-            final String URL = "http://localhost:8080/restaurant/delete/";
+            final String URL = "http://localhost:8080/restaurant/restaurant/delete/";
             final String getId = restaurantId;
             deleteRequest(URL, getId);
         } catch (Exception e) {
