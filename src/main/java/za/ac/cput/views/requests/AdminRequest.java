@@ -1,3 +1,8 @@
+/* AdminRequest.java
+ Handles Request for admin
+ Author: Ali Mohamed (219113505)
+ Date: 21 October 2022.
+*/
 package za.ac.cput.views.requests;
 
 import com.google.gson.Gson;
@@ -60,10 +65,8 @@ public class AdminRequest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
-    //
     private static String postRequest(final String url, String json) throws IOException{
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
@@ -97,7 +100,7 @@ public class AdminRequest {
         Request request = new Request.Builder()
                 .url(deleteUrl)
                 .delete()
-                //.addHeader("Authorization", Credentials.basic("Admin", "1234"))
+                .addHeader("Authorization", Credentials.basic("Admin", "1234")) //fix
                 .build();
         try(Response response = client.newCall(request).execute()) {
             return response.body().string();
@@ -105,7 +108,6 @@ public class AdminRequest {
         catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public static void deleteAdmin(String id) {
