@@ -106,7 +106,7 @@ public class BillRequest {
 
     }
 
-    public static void deleteAdmin(String billId) {
+    public static void delete(String billId) {
         try {
             final String URL = "http://localhost:8080/restaurant/bill/delete/";
             final String getId = billId;

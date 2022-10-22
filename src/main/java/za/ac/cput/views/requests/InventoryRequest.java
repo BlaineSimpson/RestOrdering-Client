@@ -102,7 +102,7 @@ public class InventoryRequest {
             throw new RuntimeException(e);
         }
     }
-    public static void deleteAdmin(String inv) {
+    public static void delete(String inv) {
         try {
             final String URL = "http://localhost:8080/restaurant/inventory/delete/";
             final String getId = inv;

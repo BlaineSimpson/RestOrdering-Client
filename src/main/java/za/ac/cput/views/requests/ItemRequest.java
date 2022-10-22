@@ -38,7 +38,7 @@ public class ItemRequest {
             for (int i = 0; i < items.length(); i++){
                 JSONObject itemObject = items.getJSONObject(i);
                 Gson g = new Gson();
-                Object a = g.fromJson(itemObject.toString(), AdminLogin.class);
+                Object a = g.fromJson(itemObject.toString(), Item.class);
                 itemList.add(a);
                 System.out.println(a.toString());
             }
@@ -74,7 +74,7 @@ public class ItemRequest {
         }
     }
 
-    public  static void save(String id, String orderID, String quantity, String price){
+    public static void save(String id, String orderID, String quantity, String price){
         try {
             final String URL = "http://localhost:8080/restaurant/item/save";
             Item item = ItemFactory.createItem(id, orderID, quantity, price);

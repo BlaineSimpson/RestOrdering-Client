@@ -105,7 +105,7 @@ public class RestaurantRequest {
 
     }
 
-    public static void deleteAdmin(String restaurantId) {
+    public static void delete(String restaurantId) {
         try {
             final String URL = "http://localhost:8080/restaurant/restaurant/delete/";
             final String getId = restaurantId;

@@ -106,7 +106,7 @@ public class SupplierRequest {
 
     }
 
-    public static void deleteAdmin(String suppID) {
+    public static void delete(String suppID) {
         try {
             final String URL = "http://localhost:8080/restaurant/supplier/delete/";
             final String getId = suppID;
