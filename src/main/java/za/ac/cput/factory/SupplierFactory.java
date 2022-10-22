@@ -9,7 +9,7 @@ Date: 1 April 2022
 import za.ac.cput.domain.Supplier;
 
 public class SupplierFactory {
-    public static Supplier createSupplier(String suppName, String suppPhysAddress, String suppEmail, int suppPhone, int suppID){
+    public static Supplier createSupplier(String suppName, String suppPhysAddress, String suppEmail, String suppPhone, String suppID){
         Supplier supplier = new Supplier.Builder().setSuppName(suppName)
                 .setSuppPhysAddress(suppPhysAddress)
                 .setSupEmail(suppEmail)

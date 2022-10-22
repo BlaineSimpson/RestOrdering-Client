@@ -16,15 +16,15 @@ import java.util.Objects;
 public class Supplier implements Serializable {
     @NotNull
     @Id
-    private String suppName;
+    private String suppID;
     @NotNull
     private String suppPhysAddress;
     @NotNull
     private String suppEmail;
     @NotNull
-    private int suppPhone;
+    private String suppPhone;
     @NotNull
-    private int suppID;
+    private String suppName;
 
 
 
@@ -53,11 +53,11 @@ public class Supplier implements Serializable {
         return suppEmail;
     }
 
-    public int getSuppPhone(){
+    public String getSuppPhone(){
         return suppPhone;
     }
 
-    private int getSuppID(){
+    private String getSuppID(){
         return suppID;
     }
 
@@ -66,11 +66,11 @@ public class Supplier implements Serializable {
     @Override
     public String toString(){
         return "Supplier{" +
-                "suppName='" + suppName + '\'' +
+                "suppName='" + suppID+ '\'' +
                 ", supPhysAddress='" + suppPhysAddress + '\'' +
                 ", supEmail='" + suppEmail + '\'' +
                 ", supPhone='" + suppPhone + '\'' +
-                ", supID='" + suppID + '\'' +
+                ", supID='" + suppName + '\'' +
                 '}';
     }
 
@@ -87,8 +87,8 @@ public class Supplier implements Serializable {
         private String suppPhysAddress;
 
         private String suppEmail;
-        private int suppPhone;
-        private int suppID;
+        private String suppPhone;
+        private String suppID;
 
 
         public Builder setSuppName(String suppName){
@@ -106,12 +106,12 @@ public class Supplier implements Serializable {
             return this;
         }
 
-        public Builder setSupPhone(int suppPhone){
+        public Builder setSupPhone(String suppPhone){
             this.suppPhone = suppPhone;
             return this;
         }
 
-        public Builder setSuppID(int suppID){
+        public Builder setSuppID(String suppID){
             this.suppID = suppID;
             return this;
         }
