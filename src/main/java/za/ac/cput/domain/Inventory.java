@@ -56,7 +56,7 @@ public class Inventory implements Serializable {
         return category;
     }
 
-    public String vendor() {
+    public String getVendor() {
         return vendor;
     }
 
