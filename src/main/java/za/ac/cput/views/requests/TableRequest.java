@@ -80,7 +80,7 @@ public class TableRequest {
             if(r!=null)
                 JOptionPane.showMessageDialog(null, "Successfully saved");
             else
-                JOptionPane.showMessageDialog(null, "Sorry, could not save");
+                JOptionPane.showMessageDialog(null, "Sorry, Table could not save");
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, e.getMessage());
         }

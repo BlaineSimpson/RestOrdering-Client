@@ -24,9 +24,9 @@ public class Inventory implements Serializable {
     @NotNull
     private String vendor;
     @NotNull
-    private int vendorInv;
+    private String vendorInv;
     @NotNull
-    private int vendorPrice;
+    private String vendorPrice;
 
 
 
@@ -60,11 +60,11 @@ public class Inventory implements Serializable {
         return vendor;
     }
 
-    public int getVendorInv(){
+    public String getVendorInv(){
         return vendorInv;
     }
 
-    public int getVendorPrice(){
+    public String getVendorPrice(){
         return vendorPrice;
     }
 
@@ -94,8 +94,8 @@ public class Inventory implements Serializable {
 
         private String category;
         private String vendor;
-        private int vendorInv;
-        private int vendorPrice;
+        private String vendorInv;
+        private String vendorPrice;
 
 
         public Builder setInv(String inv){
@@ -118,12 +118,12 @@ public class Inventory implements Serializable {
             return this;
         }
 
-        public Builder setVendorInv(int vendorInv){
+        public Builder setVendorInv(String vendorInv){
             this.vendorInv = vendorInv;
             return this;
         }
 
-        public Builder setVendorPrice(int vendorPrice){
+        public Builder setVendorPrice(String vendorPrice){
             this.vendorPrice = vendorPrice;
             return this;
         }

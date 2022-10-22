@@ -10,7 +10,7 @@ import za.ac.cput.domain.Inventory;
 
 public class InventoryFactory {
 
-    public static Inventory createInventory(String inv, String itemName, String category, String vendor, int vendorInv, int vendorPrice){
+    public static Inventory createInventory(String inv, String itemName, String category, String vendor, String vendorInv, String vendorPrice){
         Inventory inventory = new Inventory.Builder().setInv(inv)
                 .setCategory(category)
                 .setItemName(itemName)
