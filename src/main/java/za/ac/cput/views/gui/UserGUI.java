@@ -22,6 +22,8 @@ public class UserGUI {
 
     public JPanel getPanel(){
         userRequest();
+        createTable();
+        showTable();
         return userPanel;
     }
 

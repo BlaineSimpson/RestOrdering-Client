@@ -25,6 +25,8 @@ public class InventoryGUI {
 
     public JPanel getPanel(){
         inventoryRequests();
+        createTable();
+        showTable();
         return inventoryPanel;
     }
 

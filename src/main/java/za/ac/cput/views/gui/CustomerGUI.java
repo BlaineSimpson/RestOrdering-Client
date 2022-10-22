@@ -25,6 +25,8 @@ public class CustomerGUI {
 
     public JPanel getPanel(){
         customerRequests();
+        createTable();
+        showTable();
         return customerPanel;
     }
 

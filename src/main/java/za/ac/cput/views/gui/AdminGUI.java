@@ -22,6 +22,8 @@ public class AdminGUI {
 
     public JPanel getPanel(){
         adminRequests();
+        createTable();
+        showTable();
         return adminPanel;
     }
 

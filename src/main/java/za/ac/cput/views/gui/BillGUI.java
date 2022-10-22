@@ -25,6 +25,8 @@ public class BillGUI {
 
     public JPanel getPanel(){
         billRequests();
+        createTable();
+        showTable();
         return billPanel;
     }
 

@@ -14,6 +14,7 @@ public class MainUI {
     private JPanel billPanel;
     private JPanel customerPanel;
     private JPanel inventoryPanel;
+    private JPanel itemOrderPanel;
 
     public JPanel getRootPanel(){
         tab();
@@ -26,6 +27,7 @@ public class MainUI {
         billPanel = new BillGUI().getPanel();
         customerPanel = new CustomerGUI().getPanel();
         inventoryPanel = new InventoryGUI().getPanel();
+        itemOrderPanel = new ItemOrderGUI().getPanel();
 
         //tabbedPaneRoles.setPreferredSize(new Dimension(800, 500));
 
@@ -40,5 +42,6 @@ public class MainUI {
         tabbedPaneCategoryAdmin.add(inventoryPanel, "Inventory");
 
         tabbedPaneCategoryUser.add(billPanel, "Bill");
+        tabbedPaneCategoryUser.add(itemOrderPanel, "Item Order");
     }
 }

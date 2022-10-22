@@ -30,7 +30,7 @@ public class ItemOrderRequest {
     public static List<Object> getAll() {
         List<Object> itemOrderList = new ArrayList<>();
         try {
-            final String URL = "http://localhost:8080/restaurant/orderItem/all";
+            final String URL = "http://localhost:8080/restaurant/itemOrder/all";
             String responseBody = getRequest(URL);
             JSONArray itemOrders = new JSONArray(responseBody);
 
@@ -51,7 +51,7 @@ public class ItemOrderRequest {
 
     public static void viewById(String id){
         try{
-            final String URL = "http://localhost:8080/restaurant/orderItem/find/" + id;
+            final String URL = "http://localhost:8080/restaurant/itemOrder/find/" + id;
             String responseBody = getRequest(URL);
 
             System.out.println(responseBody);
@@ -75,7 +75,7 @@ public class ItemOrderRequest {
 
     public static void save(String itemId, String itemName, String numberOfPlates) {
         try {
-            final String URL = "http://localhost:8080/restaurant/orderItem/save";
+            final String URL = "http://localhost:8080/restaurant/itemOrder/save";
             ItemOrder itemOrder = ItemOrderFactory.createItemOrder(itemId, itemName, numberOfPlates);
             Gson g = new Gson();
             String jsonString = g.toJson(itemOrder);
@@ -106,7 +106,7 @@ public class ItemOrderRequest {
 
     public static void delete(String id) {
         try {
-            final String URL = "http://localhost:8080/restaurant/orderItem/delete/";
+            final String URL = "http://localhost:8080/restaurant/itemOrder/delete/";
             final String getId = id;
             deleteRequest(URL, getId);
         } catch (Exception e) {

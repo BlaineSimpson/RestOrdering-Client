@@ -16,24 +16,24 @@ import java.util.Objects;
 public class ItemOrder implements Serializable {
  @Id
  @NotNull
-    private String ItemId;
+    private String itemId;
  @NotNull
-    private String ItemName;
+    private String itemName;
  @NotNull
-    private String NumberOfPlates;
+    private String numberOfPlates;
 
 
    private ItemOrder(Builder builder){
-        this.ItemId = builder.ItemId;
-        this.ItemName = builder.ItemName;
-        this.NumberOfPlates = builder.NumberOfPlates;
+        this.itemId = builder.itemId;
+        this.itemName = builder.itemName;
+        this.numberOfPlates = builder.numberOfPlates;
 
     }
 
     public ItemOrder(String itemId, String itemName, String NumberOfPlates) {
-        ItemId = itemId;
-        ItemName = itemName;
-        this.NumberOfPlates = NumberOfPlates;
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.numberOfPlates = NumberOfPlates;
     }
 
     public ItemOrder() {
@@ -41,27 +41,27 @@ public class ItemOrder implements Serializable {
     }
 
     public String getItemId() {
-        return ItemId;
+        return itemId;
     }
 
     public void setItemId(String itemId) {
-        ItemId = itemId;
+        this.itemId = itemId;
     }
 
     public String getItemName() {
-        return ItemName;
+        return itemName;
     }
 
     public void setItemName(String itemName) {
-        ItemName = itemName;
+        this.itemName = itemName;
     }
 
     public String getPrice() {
-        return NumberOfPlates;
+        return numberOfPlates;
     }
 
     public void setNumberOfPlates(String NumberOfPlates) {
-        this.NumberOfPlates = NumberOfPlates;
+        this.numberOfPlates = NumberOfPlates;
     }
 
     @Override
@@ -69,49 +69,49 @@ public class ItemOrder implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ItemOrder itemOrder = (ItemOrder) o;
-        return ItemId.equals(itemOrder.ItemId) && ItemName.equals(itemOrder.ItemName) && NumberOfPlates.equals(itemOrder.NumberOfPlates);
+        return itemId.equals(itemOrder.itemId) && itemName.equals(itemOrder.itemName) && numberOfPlates.equals(itemOrder.numberOfPlates);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ItemId, ItemName, NumberOfPlates);
+        return Objects.hash(itemId, itemName, numberOfPlates);
     }
 
     @Override
     public String toString() {
         return "Item{" +
-                "ItemId=" + ItemId +
-                ", ItemName='" + ItemName + '\'' +
-                ", NumberOfPlates=" + NumberOfPlates +
+                "ItemId=" + itemId +
+                ", ItemName='" + itemName + '\'' +
+                ", NumberOfPlates=" + numberOfPlates +
                 '}';
     }
 
     public static class Builder{
 
-        private String ItemId;
-        private String ItemName;
-        private String NumberOfPlates;
+        private String itemId;
+        private String itemName;
+        private String numberOfPlates;
 
 
         public Builder setItemId(String itemId) {
-            ItemId = itemId;
+            this.itemId = itemId;
             return this;
         }
 
         public Builder setItemName(String itemName) {
-            ItemName = itemName;
+            this.itemName = itemName;
             return this;
         }
 
-        public Builder setNumberOfPlates(String NumberOfPlates) {
-            this.NumberOfPlates = NumberOfPlates;
+        public Builder setNumberOfPlates(String numberOfPlates) {
+            this.numberOfPlates = numberOfPlates;
             return this;
 
         }
         public Builder copy(ItemOrder item){
-          this.ItemId = item.ItemId;
-          this.ItemName =item.ItemName;
-          this.NumberOfPlates = item.NumberOfPlates;
+          this.itemId = item.itemId;
+          this.itemName =item.itemName;
+          this.numberOfPlates = item.numberOfPlates;
           return this;
 
 
