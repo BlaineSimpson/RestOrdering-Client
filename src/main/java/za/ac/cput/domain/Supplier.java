@@ -57,7 +57,7 @@ public class Supplier implements Serializable {
         return suppPhone;
     }
 
-    private String getSuppID(){
+    public String getSuppID(){
         return suppID;
     }
 

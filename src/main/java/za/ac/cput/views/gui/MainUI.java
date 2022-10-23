@@ -19,6 +19,7 @@ public class MainUI {
     private JPanel menuPanel;
     private JPanel orderPanel;
     private JPanel restaurantPanel;
+    private JPanel supplierPanel;
 
     public JPanel getRootPanel(){
         tab();
@@ -36,6 +37,7 @@ public class MainUI {
         menuPanel = new MenuGUI().getPanel();
         orderPanel = new OrderGUI().getPanel();
         restaurantPanel = new RestaurantGUI().getPanel();
+        supplierPanel = new SupplierGUI().getPanel();
 
         //tabbedPaneRoles.setPreferredSize(new Dimension(800, 500));
 
@@ -48,6 +50,7 @@ public class MainUI {
         tabbedPaneCategoryAdmin.add(userPanel, "User Account");
         tabbedPaneCategoryAdmin.add(customerPanel, "Customer");
         tabbedPaneCategoryAdmin.add(inventoryPanel, "Inventory");
+        tabbedPaneCategoryAdmin.add(supplierPanel, "Supplier");
 
         tabbedPaneCategoryUser.add(billPanel, "Bill");
         tabbedPaneCategoryUser.add(itemOrderPanel, "Item Order");
