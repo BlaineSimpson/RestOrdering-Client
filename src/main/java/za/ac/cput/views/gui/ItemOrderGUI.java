@@ -37,6 +37,7 @@ public class ItemOrderGUI {
                 textFieldName.setText("");
                 textFieldNumberOfPlates.setText("");
                 showTable();
+                //TODO: Bug null value number of plates
             }
         });
         //View all
