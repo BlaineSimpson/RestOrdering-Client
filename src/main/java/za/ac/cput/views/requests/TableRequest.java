@@ -47,7 +47,7 @@ public class TableRequest {
         }
         return tableList;
     }
-    public static void ViewById(String id){
+    public static void viewById(String id){
         try{
             final String URL= "http://localhost:8080/restaurant/tablee/find/";
             String responseBody = getRequest(URL);
@@ -100,7 +100,7 @@ public class TableRequest {
         }
 
     }
-    public static void deleteTable(String tableId){
+    public static void delete(String tableId){
         try{
             final String URL=  "http://localhost:8080/restaurant/tablee/delete/";
             final String getId= tableId;
