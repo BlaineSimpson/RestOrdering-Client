@@ -1,7 +1,6 @@
 package za.ac.cput.views.gui;
 
 import za.ac.cput.domain.Item;
-import za.ac.cput.views.requests.AdminRequest;
 import za.ac.cput.views.requests.ItemRequest;
 
 import javax.swing.*;

@@ -16,7 +16,7 @@ import java.io.Serializable;
 public class Item implements Serializable {
     @Id
     @NotNull
-    private String ID;
+    private String id;
     @NotNull
     private String orderID;
     @NotNull
@@ -28,7 +28,7 @@ public class Item implements Serializable {
 
 
     private Item(Builder builder){
-        this.ID=builder.ID;
+        this.id =builder.id;
         this.orderID=builder.orderID;
         this.quantity=builder.quantity;
         this.price=builder.price;
@@ -41,11 +41,11 @@ public class Item implements Serializable {
 
     //getters and setters
     public String getID() {
-        return ID;
+        return id;
     }
 
     public void setID(String ID) {
-        this.ID = ID;
+        this.id = ID;
     }
 
     public String getOrderID() {
@@ -77,7 +77,7 @@ public class Item implements Serializable {
     @Override
     public String toString() {
         return "Item{" +
-                "ID=" + ID +
+                "ID=" + id +
                 ", orderID=" + orderID +
                 ", quantity=" + quantity +
                 ", price=" + price +
@@ -87,13 +87,13 @@ public class Item implements Serializable {
 
 
     public static class Builder{
-        private String ID;
+        private String id;
         private  String orderID;
         private  String quantity;
         private  String price;
 
-        public Builder setID(String ID) {
-            this.ID = ID;
+        public Builder setId(String id) {
+            this.id = id;
             return this;
         }
 
@@ -113,7 +113,7 @@ public class Item implements Serializable {
         }
 
         public Builder copy(Item item){
-            this.ID=item.ID;
+            this.id =item.id;
             this.orderID=item.orderID;
             this.quantity=item.quantity;
             this.price=item.price;
