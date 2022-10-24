@@ -8,6 +8,7 @@ Date: 9 April 2022
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Item;
+import za.ac.cput.util.LoginHelper;
 
 public class ItemFactory {
 
@@ -17,6 +18,10 @@ public class ItemFactory {
                 .setQuantity(numStock)
                 .setPrice(price)
                 .build();
+        LoginHelper.checkStringParam("ID",orderId);
+        LoginHelper.checkStringParam("Order Id",orderID);
+        LoginHelper.checkStringParam("Number of stock ",numStock);
+        LoginHelper.checkStringParam("Price",price);
         return item;
     }
 

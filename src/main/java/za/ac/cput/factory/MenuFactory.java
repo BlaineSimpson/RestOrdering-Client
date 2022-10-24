@@ -1,6 +1,7 @@
 package za.ac.cput.factory;
 
 import za.ac.cput.domain.Menu;
+import za.ac.cput.util.LoginHelper;
 
 
 /* MenuFactory.java
@@ -12,7 +13,8 @@ import za.ac.cput.domain.Menu;
 public class MenuFactory {
 
     public static Menu createMenu(String MenuId, String MenuT){
-
+        LoginHelper.checkStringParam("Menu Id",MenuId);
+        LoginHelper.checkStringParam("Menu Type",MenuT);
         return new Menu.Builder().setMenuId(MenuId)
                 .setMenuT(MenuT)
                 .build();

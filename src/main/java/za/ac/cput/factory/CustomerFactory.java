@@ -5,6 +5,7 @@ package za.ac.cput.factory;
  Date: 04 April 2022
 */
 import za.ac.cput.domain.Customer;
+import za.ac.cput.util.LoginHelper;
 
 
 public class CustomerFactory {
@@ -15,6 +16,11 @@ public class CustomerFactory {
                 .setCusEmail(cusEmail)
                 .setCusAddress(cusAddress)
                 .build();
+        LoginHelper.checkStringParam("Customer Id",cusId);
+        LoginHelper.checkStringParam("Customer First Name",cusFName);
+        LoginHelper.checkStringParam("Customer Last NAme",cusLName);
+        LoginHelper.checkStringParam("Customer Email",cusEmail );
+        LoginHelper.checkStringParam("Customer Address",cusAddress);
 
         return customer;
     }

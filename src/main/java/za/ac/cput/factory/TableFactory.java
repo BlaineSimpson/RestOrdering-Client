@@ -10,10 +10,10 @@ import za.ac.cput.util.LoginHelper;
 
 public class TableFactory {
 public static Tablee createTable (String tableId, String tableNo, String noOfSeats, boolean isTableAvailable){
- LoginHelper.checkStringParam("tableId",tableId);
- LoginHelper.checkStringParam("tableNo",tableNo);
- LoginHelper.checkStringParam("noOfSeats",noOfSeats);
- LoginHelper.checkIfObjectNull("isTableAvailable", isTableAvailable);
+ LoginHelper.checkStringParam("Table Id",tableId);
+ LoginHelper.checkStringParam("Table Number",tableNo);
+ LoginHelper.checkStringParam("Number Of Seats",noOfSeats);
+ LoginHelper.checkIfObjectNull("is Table Available", isTableAvailable);
 
 
  return new Tablee.Builder().setTableId(tableId).setTableNo(tableNo).setNoOfSeats(noOfSeats).setTableAvailable(isTableAvailable).build();

@@ -11,10 +11,10 @@ import za.ac.cput.util.LoginHelper;
 public class RestaurantFactory {
     public static Restaurant createRestaurant(String restaurantId, String restaurantName,String restaurantaAdress, boolean isOpen){
 
-        LoginHelper.checkStringParam("restaurantId",restaurantId);
-        LoginHelper.checkStringParam("restaurantName",restaurantName);
-        LoginHelper.checkStringParam("restaurantAddress",restaurantaAdress);
-        LoginHelper.checkIfObjectNull("isOpen", isOpen);
+        LoginHelper.checkStringParam("Restaurant Id",restaurantId);
+        LoginHelper.checkStringParam("Restaurant Name",restaurantName);
+        LoginHelper.checkStringParam("Restaurant Address",restaurantaAdress);
+        LoginHelper.checkIfObjectNull("is Open", isOpen);
 
     return new Restaurant.Builder().setRestaurantId(restaurantId).setRestaurantName(restaurantName).setRestaurantAddress(restaurantaAdress).setOpen(isOpen).build();
     }
