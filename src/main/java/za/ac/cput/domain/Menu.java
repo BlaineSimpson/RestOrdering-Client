@@ -13,19 +13,19 @@ import java.io.Serializable;
 @Entity
 public class Menu implements Serializable {
     @Id
-    private String MenuId;
+    private String menuId;
     @NotNull
-    private String MenuT;
+    private String menuT;
 
     private Menu(Builder builder){
-        this.MenuId = builder.MenuId;
-        this.MenuT = builder.MenuT;
+        this.menuId = builder.menuId;
+        this.menuT = builder.menuT;
 
     }
 
     public Menu(String menuId, String menuT) {
-        MenuId = menuId;
-        MenuT = menuT;
+        this.menuId = menuId;
+        this.menuT = menuT;
     }
 
     public Menu() {
@@ -34,19 +34,19 @@ public class Menu implements Serializable {
 
     public String getMenuId() {
 
-        return MenuId;
+        return menuId;
     }
 
     public void setMenuId(String menuId) {
-        MenuId = menuId;
+        this.menuId = menuId;
     }
 
     public String getMenuT() {
-        return MenuT;
+        return menuT;
     }
 
     public void setMenuT(String menuT) {
-        MenuT = menuT;
+        this.menuT = menuT;
     }
 
 
@@ -57,29 +57,29 @@ public class Menu implements Serializable {
     @Override
     public String toString() {
         return "Menu{" +
-                "MenuId=" + MenuId +
-                ", MenuT=" + MenuT +
+                "MenuId=" + menuId +
+                ", MenuT=" + menuT +
                 '}';
     }
     public static class Builder {
 
-        private String MenuId;
-        private String MenuT;
+        private String menuId;
+        private String menuT;
 
     public Builder setMenuId(String menuId){
-        MenuId = menuId;
+        this.menuId = menuId;
         return this;
 
     }
 
     public Builder setMenuT(String menut){
 
-        MenuT = menut;
+        menuT = menut;
         return this;
     }
     public Builder copy(Menu menu){
-        this.MenuId = menu.MenuId;
-        this.MenuT = menu.MenuT;
+        this.menuId = menu.menuId;
+        this.menuT = menu.menuT;
         return this;
 
     }
