@@ -20,6 +20,8 @@ public class TableGUI {
     private JButton findButton;
     private JButton deleteButton;
     private JTable tableeTable;
+    private JComboBox comboBox1;
+    private JComboBox comboBox2;
 
     public JPanel getPanel(){
         tableRequests();
@@ -33,10 +35,10 @@ public class TableGUI {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TableRequest.save(textFieldTableId.getText(), textFieldTableNo.getText(), textFieldNumberOfSeats.getText(), checkIfAvailableCheckBox.isSelected());
+                TableRequest.save(textFieldTableId.getText(), (String)comboBox1.getSelectedItem(), (String) comboBox2.getSelectedItem(), checkIfAvailableCheckBox.isSelected());
                 textFieldTableId.setText("");
-                textFieldTableNo.setText("");
-                textFieldNumberOfSeats.setText("");
+                comboBox1.setSelectedIndex(0);
+                comboBox2.setSelectedIndex(0);
                 checkIfAvailableCheckBox.setSelected(false);
                 showTable();
             }
