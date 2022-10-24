@@ -9,6 +9,7 @@ public class MainUI {
     private JTabbedPane tabbedPaneCategoryAdmin;
     private JTabbedPane tabbedPaneCategoryUser;
     private JTabbedPane tabbedPaneRoles;
+    private JLabel heading;
     private JPanel adminPanel;
     private JPanel userPanel;
     private JPanel billPanel;
@@ -21,6 +22,7 @@ public class MainUI {
     private JPanel restaurantPanel;
     private JPanel supplierPanel;
     private JPanel tablePanel;
+    private Font f1,f2;
 
     public JPanel getRootPanel(){
         tab();
@@ -40,7 +42,10 @@ public class MainUI {
         restaurantPanel = new RestaurantGUI().getPanel();
         supplierPanel = new SupplierGUI().getPanel();
         tablePanel = new TableGUI().getPanel();
-
+         f1=new Font("Arial",Font.BOLD,30);
+        f2=new Font("Arial",Font.BOLD,16);
+        tabbedPaneRoles.setFont(f2);
+          heading.setFont(f1);
         //tabbedPaneRoles.setPreferredSize(new Dimension(800, 500));
 
         //Security tab panel

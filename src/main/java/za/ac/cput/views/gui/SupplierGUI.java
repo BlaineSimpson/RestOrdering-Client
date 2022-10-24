@@ -6,6 +6,7 @@ import za.ac.cput.views.requests.SupplierRequest;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -22,11 +23,28 @@ public class SupplierGUI {
     private JButton findButton;
     private JButton deleteButton;
     private JTable supplierTable;
+    private JLabel id;
+    private JLabel name;
+    private JLabel address;
+    private JLabel email;
+    private JLabel phione;
+    private Font f1,f2;
 
     public JPanel getPanel(){
         supplierRequests();
         createTable();
         showTable();
+        f1=new Font("Arial",Font.PLAIN,14);
+        f2=new Font("Arial",Font.BOLD,14);
+        saveButton.setFont(f2);
+        viewAllButton.setFont(f2);
+        findButton.setFont(f2);
+        deleteButton.setFont(f2);
+        name.setFont(f1);
+        address.setFont(f1);
+        email.setFont(f1);
+        id.setFont(f1);
+        phione.setFont(f1);
         return supplierPanel;
     }
 

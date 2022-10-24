@@ -6,6 +6,7 @@ import za.ac.cput.views.requests.CustomerRequest;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -22,11 +23,28 @@ public class CustomerGUI {
     private JButton findButton;
     private JButton deleteButton;
     private JTable customerTable;
+    private JLabel id;
+    private JLabel firstName;
+    private JLabel lastN;
+    private JLabel email;
+    private JLabel address;
+    private Font f1,f2;
 
     public JPanel getPanel(){
         customerRequests();
         createTable();
         showTable();
+        f1=new Font("Arial",Font.PLAIN,14);
+        f2=new Font("Arial",Font.BOLD,14);
+        viewAllButton.setFont(f2);
+        deleteButton.setFont(f2);
+        findButton.setFont(f2);
+        saveCustomerButton.setFont(f2);
+        id.setFont(f1);
+        address.setFont(f1);
+        email.setFont(f1);
+        firstName.setFont(f1);
+        lastN.setFont(f1);
         return customerPanel;
     }
 

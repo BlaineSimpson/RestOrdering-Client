@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="63fc8" class="javax.swing.JLabel">
+      <component id="63fc8" class="javax.swing.JLabel" binding="id">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -16,7 +16,7 @@
           <text value="ID"/>
         </properties>
       </component>
-      <component id="f0315" class="javax.swing.JLabel">
+      <component id="f0315" class="javax.swing.JLabel" binding="name">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -24,7 +24,7 @@
           <text value="Item Name"/>
         </properties>
       </component>
-      <component id="9f729" class="javax.swing.JLabel">
+      <component id="9f729" class="javax.swing.JLabel" binding="category">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -32,7 +32,7 @@
           <text value="Category"/>
         </properties>
       </component>
-      <component id="e3c51" class="javax.swing.JLabel">
+      <component id="e3c51" class="javax.swing.JLabel" binding="vendor">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -40,7 +40,7 @@
           <text value="Vendor"/>
         </properties>
       </component>
-      <component id="4096b" class="javax.swing.JLabel">
+      <component id="4096b" class="javax.swing.JLabel" binding="inv">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -48,7 +48,7 @@
           <text value="Vendor Inv"/>
         </properties>
       </component>
-      <component id="8aa38" class="javax.swing.JLabel">
+      <component id="8aa38" class="javax.swing.JLabel" binding="price">
         <constraints>
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -67,14 +67,6 @@
       <component id="3e5d2" class="javax.swing.JTextField" binding="textFieldItemName">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="1d634" class="javax.swing.JTextField" binding="textFieldCategory">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -117,6 +109,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-15511581"/>
+              <foreground color="-1"/>
               <text value="Save Inventory"/>
             </properties>
           </component>
@@ -125,6 +119,8 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-15511581"/>
+              <foreground color="-1"/>
               <text value="View All"/>
             </properties>
           </component>
@@ -133,6 +129,8 @@
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-15511581"/>
+              <foreground color="-1"/>
               <text value="Find"/>
             </properties>
           </component>
@@ -141,6 +139,8 @@
               <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-2750976"/>
+              <foreground color="-1"/>
               <text value="Delete"/>
             </properties>
           </component>
@@ -159,6 +159,20 @@
           </component>
         </children>
       </scrollpane>
+      <component id="bcc7" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Food "/>
+            <item value="Drinks"/>
+            <item value="Furniture"/>
+            <item value="stationery "/>
+            <item value="Equipment "/>
+          </model>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
