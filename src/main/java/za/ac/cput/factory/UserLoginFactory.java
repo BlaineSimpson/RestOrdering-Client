@@ -13,7 +13,7 @@ public class UserLoginFactory {
 
     public static UserLogin createUser(String userLoginId, String userLoginUsername, String userLoginPassword){
         if (LoginHelper.isNull(userLoginId) || LoginHelper.isNull(userLoginUsername) || LoginHelper.isNull(userLoginPassword))
-            throw new IllegalArgumentException("Username and password cannot be empty or null");
+            throw new IllegalArgumentException("ID, Username and password cannot be empty or null");
 //        if (LoginHelper.invalidId(userLoginId))
 //            return null;
 

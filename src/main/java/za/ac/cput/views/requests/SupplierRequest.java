@@ -74,10 +74,10 @@ public class SupplierRequest {
         }
     }
 
-    public static void save(String suppID, String suppPhysAddress, String suppEmail, String suppPhone, String suppName){
+    public static void save(String suppName, String suppPhysAddress, String suppEmail, String suppPhone,  String suppID){
         try{
             final String URL = "http://localhost:8080/restaurant/supplier/save";
-            Supplier supplier = SupplierFactory.createSupplier(suppID, suppPhysAddress,suppEmail,suppPhone,suppName);
+            Supplier supplier = SupplierFactory.createSupplier(suppName, suppPhysAddress, suppEmail, suppPhone, suppID);
             Gson g = new Gson();
             String jsonString = g.toJson(supplier);
             String r = postRequest(URL, jsonString);

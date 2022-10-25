@@ -30,10 +30,10 @@ public class ItemOrder implements Serializable {
 
     }
 
-    public ItemOrder(String itemId, String itemName, String NumberOfPlates) {
+    public ItemOrder(String itemId, String itemName, String numberOfPlates) {
         this.itemId = itemId;
         this.itemName = itemName;
-        this.numberOfPlates = NumberOfPlates;
+        this.numberOfPlates = numberOfPlates;
     }
 
     public ItemOrder() {
@@ -60,8 +60,8 @@ public class ItemOrder implements Serializable {
         return numberOfPlates;
     }
 
-    public void setNumberOfPlates(String NumberOfPlates) {
-        this.numberOfPlates = NumberOfPlates;
+    public void setNumberOfPlates(String numberOfPlates) {
+        this.numberOfPlates = numberOfPlates;
     }
 
     @Override

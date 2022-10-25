@@ -11,6 +11,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import za.ac.cput.domain.AdminLogin;
 import za.ac.cput.factory.AdminLoginFactory;
+import za.ac.cput.util.Authenticate;
+import za.ac.cput.views.gui.LoginUI;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -21,11 +23,13 @@ public class AdminRequest {
 
     private static OkHttpClient client = new OkHttpClient();
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+    //private static LoginUI loginUI;
 
     private static String getRequest(String URL) throws IOException {
         Request request = new Request.Builder()
                 .url(URL)
                 .addHeader("Authorization", Credentials.basic("Admin", "1234"))
+                //.addHeader("Authorization", loginUI.loginRequest())
                 .build();
         try (Response response = client.newCall(request).execute()) {
             return response.body().string();

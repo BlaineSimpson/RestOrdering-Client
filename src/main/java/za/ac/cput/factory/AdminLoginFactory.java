@@ -13,7 +13,7 @@ public class AdminLoginFactory {
 
     public static AdminLogin createAdmin(String adminLoginId, String adminLoginUsername, String adminLoginPassword){
         if (LoginHelper.isNull(adminLoginId) || LoginHelper.isNull(adminLoginUsername) || LoginHelper.isNull(adminLoginPassword))
-            throw new IllegalArgumentException("Username and password cannot be empty or null");
+            throw new IllegalArgumentException("ID, Username and password cannot be empty or null");
 //            return null;
 //        if(LoginHelper.isNull(adminLoginId))
 //            return null;

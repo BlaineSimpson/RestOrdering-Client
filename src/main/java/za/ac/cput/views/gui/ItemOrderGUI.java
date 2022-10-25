@@ -32,7 +32,7 @@ public class ItemOrderGUI {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ItemOrderRequest.save(textFieldItemId.getText(), textFieldName.getName(), textFieldNumberOfPlates.getText());
+                ItemOrderRequest.save(textFieldItemId.getText(), textFieldName.getText(), textFieldNumberOfPlates.getText());
                 textFieldItemId.setText("");
                 textFieldName.setText("");
                 textFieldNumberOfPlates.setText("");
@@ -83,7 +83,7 @@ public class ItemOrderGUI {
                     new Object[] {
                             itemOrderList.get(i).getItemId(),
                             itemOrderList.get(i).getItemName(),
-                            itemOrderList.get(i).getPrice()
+                            itemOrderList.get(i).getPrice(),
                     }
             );
         }

@@ -35,7 +35,7 @@ public class SupplierGUI {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SupplierRequest.save(textFieldSupplierId.getText(), textFieldName.getText(), textFieldAddress.getText(), textFieldEmail.getText(), textFieldPhone.getText());
+                SupplierRequest.save(textFieldName.getText(), textFieldAddress.getText(), textFieldEmail.getText(), textFieldPhone.getText(),  textFieldSupplierId.getText());
                 textFieldSupplierId.setText("");
                 textFieldName.setText("");
                 textFieldAddress.setText("");
