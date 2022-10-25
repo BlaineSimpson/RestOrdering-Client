@@ -5,6 +5,7 @@ import za.ac.cput.views.requests.BillRequest;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -22,11 +23,30 @@ public class BillGUI {
     private JButton findButton;
     private JButton deleteButton;
     private JTable billtable;
+    private JLabel id;
+    private JLabel date;
+    private JLabel cusId;
+    private JLabel restId;
+    private JLabel billD;
+    private JLabel amount;
+    private Font f1,f2;
 
     public JPanel getPanel(){
         billRequests();
         createTable();
         showTable();
+        f1=new Font("Arial",Font.PLAIN,14);
+        f2=new Font("Arial",Font.BOLD,14);
+        saveBillButton.setFont(f2);
+        viewAllButton.setFont(f2);
+        findButton.setFont(f2);
+        deleteButton.setFont(f2);
+        id.setFont(f1);
+        amount.setFont(f1);
+        cusId.setFont(f1);
+        date.setFont(f1);
+        restId.setFont(f1);
+        billD.setFont(f1);
         return billPanel;
     }
 

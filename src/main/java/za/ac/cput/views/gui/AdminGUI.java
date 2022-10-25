@@ -5,6 +5,7 @@ import za.ac.cput.views.requests.AdminRequest;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -19,11 +20,25 @@ public class AdminGUI {
     private JButton viewAllButton;
     private JButton findButton;
     private JButton deleteButton;
+    private JLabel id;
+    private JLabel username;
+    private JLabel password;
+    private Font f1,f2;
+
 
     public JPanel getPanel(){
         adminRequests();
         createTable();
         showTable();
+        f1=new Font("Arial",Font.PLAIN,14);
+        f2=new Font("Arial",Font.BOLD,14);
+        viewAllButton.setFont(f2);
+        deleteButton.setFont(f2);
+        findButton.setFont(f2);
+        save.setFont(f2);
+        id.setFont(f1);
+        username.setFont(f1);
+        password.setFont(f1);
         return adminPanel;
     }
 
