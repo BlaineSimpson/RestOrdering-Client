@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="8dd6b" class="javax.swing.JLabel">
+      <component id="8dd6b" class="javax.swing.JLabel" binding="id">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -16,7 +16,7 @@
           <text value="ID"/>
         </properties>
       </component>
-      <component id="62" class="javax.swing.JLabel">
+      <component id="62" class="javax.swing.JLabel" binding="orderId">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -24,7 +24,7 @@
           <text value="Order ID"/>
         </properties>
       </component>
-      <component id="e182c" class="javax.swing.JLabel">
+      <component id="e182c" class="javax.swing.JLabel" binding="quantity">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -32,7 +32,7 @@
           <text value="Quantity"/>
         </properties>
       </component>
-      <component id="bdd49" class="javax.swing.JLabel">
+      <component id="bdd49" class="javax.swing.JLabel" binding="price">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -85,6 +85,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-14645569"/>
+              <foreground color="-1"/>
               <text value="Save"/>
             </properties>
           </component>
@@ -93,6 +95,8 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-14645569"/>
+              <foreground color="-1"/>
               <text value="View All"/>
             </properties>
           </component>
@@ -101,6 +105,8 @@
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-14645569"/>
+              <foreground color="-1"/>
               <text value="Find"/>
             </properties>
           </component>
@@ -109,6 +115,8 @@
               <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-2750976"/>
+              <foreground color="-1"/>
               <text value="Delete"/>
             </properties>
           </component>

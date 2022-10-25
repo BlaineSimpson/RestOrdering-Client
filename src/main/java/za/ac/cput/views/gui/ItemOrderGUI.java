@@ -5,6 +5,7 @@ import za.ac.cput.views.requests.ItemOrderRequest;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -19,11 +20,24 @@ public class ItemOrderGUI {
     private JButton findButton;
     private JButton deleteButton;
     private JTable itemOrderTable;
+    private JLabel id;
+    private JLabel name;
+    private JLabel plate;
+    private Font f1,f2;
 
     public JPanel getPanel(){
         itemOrderRequests();
         createTable();
         showTable();
+        f1=new Font("Arial",Font.PLAIN,14);
+        f2=new Font("Arial",Font.BOLD,14);
+        deleteButton.setFont(f2);
+        saveButton.setFont(f2);
+        viewAllButton.setFont(f2);
+        findButton.setFont(f2);
+        id.setFont(f1);
+        name.setFont(f1);
+        plate.setFont(f1);
         return itemOrderPanel;
     }
 

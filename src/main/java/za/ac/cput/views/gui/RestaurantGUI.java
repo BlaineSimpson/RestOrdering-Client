@@ -6,6 +6,7 @@ import za.ac.cput.views.requests.RestaurantRequest;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -21,11 +22,26 @@ public class RestaurantGUI {
     private JButton findButton;
     private JButton deleteButton;
     private JTable restaurantTable;
-
+    private JLabel id;
+    private JLabel name;
+    private JLabel address;
+    private JLabel open;
+    private Font f1,f2;
     public JPanel getPanel(){
         restaurantRequests();
         createTable();
         showTable();
+
+        f1=new Font("Arial",Font.PLAIN,14);
+        f2=new Font("Arial",Font.BOLD,14);
+        saveButton.setFont(f2);
+        deleteButton.setFont(f2);
+        findButton.setFont(f2);
+        viewAllButton.setFont(f2);
+        id.setFont(f1);
+        name.setFont(f1);
+        address.setFont(f1);
+        open.setFont(f1);
         return restaurantPanel;
     }
 

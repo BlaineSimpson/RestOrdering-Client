@@ -7,6 +7,7 @@ Date: 1 April 2022
  */
 
 import za.ac.cput.domain.Inventory;
+import za.ac.cput.util.LoginHelper;
 
 public class InventoryFactory {
 
@@ -18,6 +19,11 @@ public class InventoryFactory {
                 .setVendorInv(vendorInv)
                 .setVendorPrice(vendorPrice)
                 .build();
+        LoginHelper.checkStringParam("inv",inv);
+        LoginHelper.checkStringParam("Item Name",itemName);
+        LoginHelper.checkStringParam("Category",category);
+        LoginHelper.checkStringParam("Vendor",vendor );
+        LoginHelper.checkStringParam("Vendor inventory ",vendorInv);
         return inventory;
     }
 }
