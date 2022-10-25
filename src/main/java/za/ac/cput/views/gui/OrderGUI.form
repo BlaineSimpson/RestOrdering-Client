@@ -71,7 +71,7 @@
             <properties>
               <background color="-14645569"/>
               <foreground color="-1"/>
-              <text value="Save"/>
+              <text value="Save Order"/>
             </properties>
           </component>
           <component id="13868" class="javax.swing.JButton" binding="viewAllButton" default-binding="true">

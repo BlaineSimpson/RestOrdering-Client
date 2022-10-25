@@ -21,6 +21,7 @@ public class MenuGUI {
     private JTable menuTable;
     private JLabel id;
     private JLabel type;
+    private JComboBox comboBox1;
     private Font f1,f2;
 
     public JPanel getPanel(){
@@ -33,6 +34,7 @@ public class MenuGUI {
         findButton.setFont(f2);
         viewAllButton.setFont(f2);
         deleteButton.setFont(f2);
+        comboBox1.setFont(f1);
         id.setFont(f1);
         type.setFont(f1);
         return menuPanel;
@@ -43,9 +45,9 @@ public class MenuGUI {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MenuRequest.save(textFieldMenuId.getText(), textFieldType.getText());
+                MenuRequest.save(textFieldMenuId.getText(), (String) comboBox1.getSelectedItem());
                 textFieldMenuId.setText("");
-                textFieldType.setText("");
+                comboBox1.setSelectedIndex(0);
                 showTable();
             }
         });
