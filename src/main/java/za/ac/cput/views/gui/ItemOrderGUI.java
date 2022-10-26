@@ -95,8 +95,8 @@ public class ItemOrderGUI {
             model.addRow(
                     new Object[] {
                             itemOrderList.get(i).getItemId(),
-                            itemOrderList.get(i).getItemName(),
-                            itemOrderList.get(i).getPrice(),
+                            itemOrderList.get(i).getItemName()
+                           // itemOrderList.get(i).getPrice(),
                     }
             );
         }
@@ -112,8 +112,8 @@ public class ItemOrderGUI {
                 model.addRow(
                         new Object[] {
                                 itemOrder.getItemId(),
-                                itemOrder.getItemName(),
-                                itemOrder.getPrice()
+                                itemOrder.getItemName()
+                               // itemOrder.getPrice()
                         }
                 );
             }
