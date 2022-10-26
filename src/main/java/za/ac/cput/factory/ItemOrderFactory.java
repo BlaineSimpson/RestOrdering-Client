@@ -17,7 +17,6 @@ public class ItemOrderFactory {
         //LoginHelper.checkStringParam("Number Of Plates",NumberOfPlates);
       return new ItemOrder.Builder().setItemId(ItemId)
               .setItemName(ItemName)
-              .setNumberOfPlates(NumberOfPlates)
               .build();
 
 
