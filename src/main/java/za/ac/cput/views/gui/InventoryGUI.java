@@ -98,7 +98,7 @@ public class InventoryGUI {
     private void createTable(){
         inventoryTable.setModel(new DefaultTableModel(
                 null,
-                new String[] {"ID", "Item Name", "Category", "Vendor", "Vendor Inv", "Vendor Price"}
+                new String[] {"ID", "Item Name", "Category", "Vendor", "Quantity", "Vendor Price"}
         ));
     }
     private void showTable(){

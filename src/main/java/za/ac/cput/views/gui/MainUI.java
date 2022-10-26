@@ -61,8 +61,8 @@ public class MainUI {
 
         tabbedPaneCategoryUser.add(billPanel, "Bill");
         tabbedPaneCategoryUser.add(orderPanel, "Order");
-        tabbedPaneCategoryUser.add(itemPanel, "Item Order");
-        tabbedPaneCategoryUser.add(itemOrderPanel, "Item");
+        tabbedPaneCategoryUser.add(itemPanel, "Item");
+        tabbedPaneCategoryUser.add(itemOrderPanel, "Item Order");
         tabbedPaneCategoryUser.add(menuPanel, "Menu");
         tabbedPaneCategoryUser.add(restaurantPanel, "Restaurant");
         tabbedPaneCategoryUser.add(tablePanel, "Table");
