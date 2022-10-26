@@ -51,7 +51,6 @@ public class ItemOrderGUI {
                 textFieldName.setText("");
                 textFieldNumberOfPlates.setText("");
                 showTable();
-                //TODO: Bug null value number of plates
             }
         });
         //View all
@@ -83,7 +82,7 @@ public class ItemOrderGUI {
     private void createTable(){
         itemOrderTable.setModel(new DefaultTableModel(
                 null,
-                new String[] {"ID", "Item Name", "Number of Plates"}
+                new String[] {"ID", "Item Name"}
         ));
     }
     private void showTable(){
